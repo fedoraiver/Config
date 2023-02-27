@@ -1,0 +1,51 @@
+{
+  //  files that want to be ignore
+  "files.exclude": {
+    // ignore dSYM file
+    "**/*.dSYM": true,
+    // ignore .out file
+    "**/*.out": true
+  },
+
+  // Code Runner
+  // To run code:
+  //   use shortcut "F5" *
+  //   or press F1 and then select/type Run Code,
+  //   or right click the Text Editor and then click Run Code in editor context menu
+  //   or click Run Code button in editor title menu
+  //   or click Run Code button in context menu of file explorer
+  // To stop the running code:
+  //   use shortcut "NumPad2" *
+  //   or press F1 and then select/type Stop Code Run
+  //   or right click the Output Channel and then click Stop Code Run in context menu
+  "code-runner.executorMap": {
+    // Introduction:
+    //   Make sure the executor PATH of each language is set in the environment variable.
+    //   You could also add entry into "code-runner.executorMap" to set the executor PATH.
+    // Supported customized parameters:
+    //   $workspaceRoot: The path of the folder opened in VS Code
+    //   $dir: The directory of the code file being run
+    //   $fullFileName: The full name of the code file being run
+    //   $fileName: The base name of the code file being run, that is the file without the directory
+    //   $fileNameWithoutExt: The base name of the code file being run without its extension
+    "cpp": "g++ $fullFileName -o $dir\"$fileNameWithoutExt\"\".out\" -W -Wall -O2 -std=c++20 && $dir\"$fileNameWithoutExt\"\".out\"",
+    "c": "gcc $fullFileName -o $dir\"$fileNameWithoutExt\"\".out\" -W -Wall -O2 -std=c20 && $dir\"$fileNameWithoutExt\"\".out\""
+    // "c": "gcc $fullFileName <file_to_link> -o $dir\"$fileNameWithoutExt\"\".out\" -W -Wall -O2 -std=c17 && $dir\"$fileNameWithoutExt\"\".out\"",
+  },
+  // Whether to clear previous output before each run (default is false):
+  "code-runner.clearPreviousOutput": true,
+  // Whether to save all files before running (default is false):
+  "code-runner.saveAllFilesBeforeRun": true,
+  // Whether to save the current file before running (default is false):
+  "code-runner.saveFileBeforeRun": true,
+  // Whether to show extra execution message like [Running] ... and [Done] ... (default is true):
+  "code-runner.showExecutionMessage": true, // cannot see that message is you set "code-runner.runInTerminal" to true
+  // Whether to preserve focus on code editor after code run is triggered (default is true, the code editor will keep focus; when it is false, Terminal or Output Channel will take focus):
+  "code-runner.preserveFocus": false,
+  // Whether to ignore selection to always run entire file. (Default is false)
+  "code-runner.ignoreSelection": true,
+  "vim.vimrc.enable": true,
+  "task.allowAutomaticTasks": "on",
+  "cmake.sourceDirectory": "${workspaceFolder}/cmake"
+  // --------------------------------------------------------------------------------------
+}
