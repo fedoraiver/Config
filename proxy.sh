@@ -6,7 +6,7 @@
 export http_proxy="http://ip:7890"
 export https_proxy="http://ip:7890"
 export ftp_proxy="http://ip:7890"
-export no_proxy="http://ip:7890"
+export no_proxy="127.0.0.1,localhost"
 # For curl
 export HTTP_PROXY="http://ip:7890"
 export HTTPS_PROXY="http://ip:7890"
