@@ -55,21 +55,6 @@ inoremap <C-j> <LEFT>
 inoremap <C-l> <RIGHT>
 inoremap <C-i> <UP>
 inoremap <C-k> <DOWN>
-"set the colemak keymap
-
-function! ToggleKeymap()
-    if &keymap == ""
-        set keymap=dvorak
-        set imsearch=0
-        echom "dvorak"
-    else
-        set keymap=
-        set iminsert=0
-        echom "qwerty"
-    endif
-endfunction
-
-command! K call ToggleKeymap() " This is the one I should use
 " Vim-Plug's pluggins
 call plug#begin('~/.vim/plugged')
 
@@ -77,10 +62,6 @@ Plug 'vim-airline/vim-airline'
 Plug 'neoclide/coc.nvim', {'branch': 'release'}
 Plug 'preservim/nerdtree'
 Plug 'tmhedberg/SimpylFold'
-"Plug 'dense-analysis/ale'
-"Plug 'mbbill/undotree'
-"Plug 'preservim/nerdcommenter'
-"Plug 'connorholyday/vim-snazzy'
 
 call plug#end()
 " Coc.nvim's pluggins
@@ -92,30 +73,6 @@ call plug#end()
 		\ 'coc-xml', 
 		\ 'coc-pyright',
 		\]
-" 		\ 'coc-css',
-"		\ 'coc-diagnostic',
-"		\ 'coc-docker',
-"		\ 'coc-eslint',
-"		\ 'coc-explorer',
-"		\ 'coc-flutter-tools',
-"		\ 'coc-gitignore',
-"		\ 'coc-html',
-"		\ 'coc-import-cost',
-"		\ 'coc-java',
-"		\ 'coc-jest',
-"		\ 'coc-lists',
-"		\ 'coc-omnisharp',
-"		\ 'coc-prettier',
-"		\ 'coc-prisma',
-"		\ 'coc-snippets',
-"		\ 'coc-sourcekit',
-"		\ 'coc-stylelint',
-"		\ 'coc-syntax',
-"		\ 'coc-tasks',
-"		\ 'coc-tsserver',
-"		\ 'coc-vetur',
-"		\ 'coc-yaml',
-"		\ 'coc-yank'
 " Coc.nvim's config
 set hidden 
 set updatetime=100
