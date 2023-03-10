@@ -8,16 +8,6 @@
   },
 
   // Code Runner
-  // To run code:
-  //   use shortcut "F5" *
-  //   or press F1 and then select/type Run Code,
-  //   or right click the Text Editor and then click Run Code in editor context menu
-  //   or click Run Code button in editor title menu
-  //   or click Run Code button in context menu of file explorer
-  // To stop the running code:
-  //   use shortcut "NumPad2" *
-  //   or press F1 and then select/type Stop Code Run
-  //   or right click the Output Channel and then click Stop Code Run in context menu
   "code-runner.executorMap": {
     // Introduction:
     //   Make sure the executor PATH of each language is set in the environment variable.
@@ -28,8 +18,8 @@
     //   $fullFileName: The full name of the code file being run
     //   $fileName: The base name of the code file being run, that is the file without the directory
     //   $fileNameWithoutExt: The base name of the code file being run without its extension
-    "cpp": "g++ $fullFileName -o $dir\"$fileNameWithoutExt\"\".out\" -W -Wall -O2 -std=c++20 && rm -rf $dir\"$fileNameWithoutExt\"\".out\"",
-    "c": "gcc $fullFileName -o $dir\"$fileNameWithoutExt\"\".out\" -W -Wall -O2 -std=c20 && rm -rf $dir\"$fileNameWithoutExt\"\".out\""
+    "cpp": "g++ $fullFileName -o $dir\"$fileNameWithoutExt\"\".out\" -W -Wall -O2 -std=c++20 &&  $dir\"$fileNameWithoutExt\"\".out\"&& rm -rf $dir\"$fileNameWithoutExt\"\".out\"",
+    "c": "gcc $fullFileName -o $dir\"$fileNameWithoutExt\"\".out\" -W -Wall -O2 -std=c20 &&  $dir\"$fileNameWithoutExt\"\".out\"&& rm -rf  $dir\"$fileNameWithoutExt\"\".out\""
     // "c": "gcc $fullFileName <file_to_link> -o $dir\"$fileNameWithoutExt\"\".out\" -W -Wall -O2 -std=c17 && $dir\"$fileNameWithoutExt\"\".out\"",
   },
   // Whether to clear previous output before each run (default is false):
@@ -49,3 +39,4 @@
   "cmake.sourceDirectory": "${workspaceFolder}/cmake"
   // --------------------------------------------------------------------------------------
 }
+v
